@@ -1,0 +1,89 @@
+
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: gray; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+}
+header {
+    padding: 5%;
+    background-color: black;
+    border-left: 3px solid blue;
+    border-bottom: 3px dotted blue;
+    border-radius: 0 0 0 60px;
+    background-image: url('MeesJookseb.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+footer{
+    padding: 5%;
+    background-color: black;
+    border-left: 3px solid blue;
+    border-top: 3px dotted blue;
+    border-radius: 60px 0 0 0;
+}
+section#osa1{
+    padding: 5%;
+    border: 1px solid blue; /*doted, dashed, double, outline, groove*/
+    margin: 5px;
+    width: 25%;
+    /*kirjuta iga section oma kujundusega mis kasutab erinevaid äärised,
+    värvi, raam võiks olla ainult ühelt poolt jne*/
+}
+section#osa2{
+    padding: 5%;
+    border: 1px solid blue;
+    margin: 5px;
+    width: 15%;
+}
+section#osa3{
+    padding: 1%;
+    border: 3px dotted red;
+    margin: 2px;
+    width: 25%;
+}
+section#osa4{
+    padding: 1%;
+    border: 1px double deeppink;
+    margin: 2px;
+    width: 40%;
+    border-radius: 60px;
+}
+section#osa5{
+    padding: 5%;
+    border: 1px dashed black;
+    margin: 5px;
+    width: 15%;
+}
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid blue;
+}
+/*navigeerimis menüü*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+nav ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: deepskyblue;
+    text-decoration: none; /*link alljooneta ei ole */
+    text-align: center; /*teksti joondamine keskel*/
+    padding: 10px;
+    border-left: 3px black solid;
+    border-radius: 50%;
+}
+nav{
+    padding: 5%;
+    margin: 5px;
+}
+nav ul li a:hover{
+    background-color: black;
+}
