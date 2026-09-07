@@ -87,3 +87,25 @@ nav{
 nav ul li a:hover{
     background-color: black;
 }
+#suurkast{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+#pildigalerii{
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+#muusika{
+
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+#kaart{
+    border: 2px solid blue;
+    border-radius: 15px;
+}
+#video{
+border: 2px solid blue;
+    border-radius: 15px;
+}
