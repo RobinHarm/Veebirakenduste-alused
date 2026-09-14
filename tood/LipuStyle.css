@@ -121,3 +121,45 @@ h1#lipud{
     background-color: white;
     width: 50px;
 }
+#iseseisev{
+    width: 330px;
+    height: 210px;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+#iseseisev tr:nth-child(1){
+    background-color: red;
+}
+#iseseisev tr:nth-child(2) td:nth-child(1){
+    background-color: blue;
+}
+#iseseisev tr:nth-child(2) td:nth-child(2){
+    background-color: green;
+}
+#iseseisev tr:nth-child(5) td:nth-child(1){
+    background-color: purple;
+}
+#iseseisev tr:nth-child(6) td:nth-child(1){
+    background-color: orange;
+}
+#iseseisev tr:nth-child(2) td:nth-child(4){
+    background-color: cyan;
+}
+#iseseisev tr:nth-child(2) td:nth-child(3){
+    background-color: gray;
+}
+#iseseisev tr:nth-child(3) td:nth-child(1){
+    background-color: yellow;
+}
+#iseseisev tr:nth-child(3) td:nth-child(2){
+    background-color: gold;
+}
+#iseseisev tr:nth-child(4) td:nth-child(1){
+    background-color: brown;
+}
+#iseseisev tr:nth-child(4) td:nth-child(2){
+    background-color: burlywood;
+}
+#iseseisev tr:nth-child(3) td:nth-child(3){
+    background-color: lightgreen;
+}
