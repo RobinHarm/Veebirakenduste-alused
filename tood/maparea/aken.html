@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Map area kasutamine</title>
+    <link rel="stylesheet" href="mapStyle.css">
+</head>
+<body>
+<h1>Lehel on kasutatud map area käsud</h1>
+<h2>Vajuta pildil päikese, ümmarguse akna, korsteni, katuse, muru ja ukse peale ja  siia tuleb väike kirjeldus...</h2>
+<img src="maja.png" alt="ilus maja" usemap="#majakaart">
+<!-- kasutame map'i (kaart) -->
+<map name="majakaart">
+    <!-- ring -circle coords=x, y, R-->
+    <area shape="circle" coords="350,230,30" href="aken.html" alt="aken">
+
+    <!-- riskülik rect coords=x, y, x1, y2-->
+    <area shape="rect" coords="300,40,333,120" href="korsten.html" alt="korsten">
+
+    <!-- mitu nurga plügoon -poly  coords=x, y, x1, y1, x2, y2-kolmunrk-->
+    <area shape="poly" coords="120,133,270,3,161,139" href="katus.html" alt="katus">
+    <!-- riskülik rect coords=x, y, x1, y2-->
+    <area shape="rect" coords="190,200,270,330" href="uks.html" alt="uks">
+
+    <area shape="rect" coords="0,417,430,465" href="muru.html" alt="muru">
+
+    <area shape="circle" coords="35,30,40" href="paike.html" alt="paike">
+</map>
+<div id="selgitus">
+    Aken on viited hoone, sõiduki või muu objekti seinas, katuses või ukses olev ava ja konstruktsioon, mis laseb sisse valgust ja õhku.
+<img src="https://oknaweka.com/uploads/present/gotovye-230322-134649-m206659-1_crop_300x300.webp" alt="aken">
+</div>
+<br>
+<a href="https://robinharm.github.io/Veebirakenduste-alused/Tehtud.html">Tagasi Kodulehele</a>
+</body>
+</html>
