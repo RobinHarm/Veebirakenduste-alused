@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Küsimused</title>
+    <script src="../js/Muusika.js"></script>
+</head>
+<body>
+<form action="#">
+    <table border="1">
+        <tr>
+            <td colspan="2">
+                <fieldset>
+                        <strong>Spordialad:</strong>
+                    <br>
+<input type="checkbox" name="muusikud" id="AlanWalker" value="AlanWalker" onChange="Muusika()">
+<label for="AlanWalker">Alan Walker</label>
+<br>
+<input type="checkbox" name="muusikud" id="EdSheeran" value="EdSheeran" onChange="Muusika()">
+<label for="EdSheeran">Ed Sheeran</label>
+<br>
+<input type="checkbox" name="muusikud" id="NCS" value="NCS" onChange="Muusika()">
+<label for="NCS">NCS</label>
+<br>
+<input type="checkbox" name="muusikud" id="Eminem" value="Eminem" onChange="Muusika()">
+<label for="Eminem">Eminem</label>
+<br>
+<input type="checkbox" name="muusikud" id="ViisMiinust" value="ViisMiinust" onChange="Muusika()">
+<label for="ViisMiinust">Viis miinust</label>
+                </fieldset>
+            </td>
+        <td>
+        <div id="muusika1"></div>
+        </td>
+        </tr>
+
+        <tr>
+            <td>
+                <!--tekstikast -->
+                <label for="Arvamus">Sisesta oma arvamus koolis muusika kuulamise kohta:</label>
+            </td>
+            <td>
+                <input type="text" id="Arvamus" oninput="Muusikakuulamine()">
+            </td>
+            <td>
+                <div id="vastus"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+        <label for="tund">Mitu tundi päevas sa kuulad muusikat</label>
+        </td>
+        <td>
+            <input type="number" min="0" max="24" step="1" value="0" id="tund">
+        </td>
+
+        <td>
+            <div id="muusika2"></div>
+        </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                    <legend>
+                        <strong>Kas sa kuulad raadiot</strong>
+                    </legend>
+                    <input type="radio" name="Vastus6" id="Jah" value="Jah" onChange="KasMuusika()" >
+                    <label for="Jah">Jah</label>
+                    <br>
+                    <input type="radio" name="Vastus6" id="Ei" value="Ei" onChange="KasMuusika()">
+                    <label for="Ei">Ei</label>
+        <td>
+            <div id="muusika3"></div>
+        </td>
+        </tr>
+                    <tr>
+                        <td>
+                            <!--tekstikast -->
+                            <label for="Raadiojaamad">Milliseid raadiojaamu oskad nimetada?</label>
+                        </td>
+                        <td>
+                            <input type="text" id="Raadiojaamad">
+                        </td>
+        <tr>
+            <td>
+                <br>
+                <strong>Millist muusikat sa koige rohkem kuulad</strong>
+                <br>
+            </td>
+            <td>
+                <!-- radionupp - ainult üks valik on õige -->
+                <input type="radio" name="stiil" id="Jazz" value="Jazz" >
+                <label for="Jazz">Jazz</label>
+                <br>
+                <input type="radio" name="stiil" id="Hip-Hop" value="Hip-Hop" >
+                <label for="Hip-Hop">Hip-Hop</label>
+                <br>
+                <input type="radio" name="stiil" id="rap" value="rap" >
+                <label for="rap">rap</label>
+                <br>
+                <input type="radio" name="stiil" id="Rock" value="Rock" >
+                <label for="Rock">Rock</label>
+                <br>
+                <input type="radio" name="stiil" id="EDM" value="EDM" >
+                <label for="EDM">EDM</label>
+                <br>
+                <input type="radio" name="stiil" id="muu" value="muu" >
+                <label for="muu">muu</label>
+            </td>
+
+        </tr>
+    </table>
+</form>
+</body>
+</html>
