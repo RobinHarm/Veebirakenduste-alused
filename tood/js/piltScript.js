@@ -13,4 +13,23 @@ function randomPilt() {
     const randomPilt=document.getElementById("randomPilt");
 
     randomPilt.src=rpilt;
+    vastus.innerHTML="Siia tuleb vastus...";
+    vastus.style.color="black";
+}
+function radioValik() {
+    let vastus=document.getElementById("vastus");
+    let valik=document.getElementsByName("valik");
+    let randomPilt=document.getElementById("randomPilt");
+
+    for(let i=0; i<valik.length; i++){
+        if(valik[i].checked){
+            if(randomPilt.getAttribute("src")==valik[i].value){
+                vastus.innerHTML="õige vastus";
+                vastus.style.color="green";
+            } else {
+                vastus.innerHTML="vale vastus";
+                vastus.style.color="red";
+            }
+        }
+    }
 }
