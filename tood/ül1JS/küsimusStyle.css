@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+    padding: 40px;
+}
+
+table {
+    width: 100%;
+    background-color: purple;
+    border-radius: 10px;
+}
+
+td {
+    padding: 15px 15px;
+    border: 1px solid white;
+    vertical-align: middle;
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: red;
+    margin-right: 6px;
+}
