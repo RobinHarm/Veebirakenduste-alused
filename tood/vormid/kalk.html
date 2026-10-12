@@ -4,29 +4,72 @@
     <meta charset="UTF-8">
     <title>Saia kalkulaator</title>
     <script src="../js/saiakalkScript.js"></script>
+    <script src="../js/tempKalk.js"></script>
     <link rel="stylesheet" href="kalkStyle.css">
+    <script src="../js/valuutaScript.js"></script>
+    <script src="../js/protsentScript.js"></script>
 </head>
 <body>
 
-<h1>Kalkulaatorid</h1>
-<section id="osa1">
-    <h2>Saia kalkulaator</h2>
-    <label for="kogus">Kogus:</label>
-    <input type="number" id="kogus" min="1" max="10" step="1" onchange="saiaKalk()">
-    <br>
-    <label for="saiatyyp">Palun vali saia tüüp</label>
-    <select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
-        <option value="vali">vali...</option>
-        <option value="mooni">moonisai</option>
-        <option value="juustu">juustusai</option>
-        <option value="pontsik">pontsik</option>
-        <option value="kaneeli">kaneelisai</option>
-    </select>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPJ5yZ5TSfv4ZnNpx4XZYgADEIbohxG8I-GeNkvLOYwA&s=10" alt="" id="pilt" width="100" height="100">
-    <div id="vastus"></div>
-</section>
-<section id="osa2">
-    <h2>Temperatuuri kalkulaator</h2>
+<h1>Kalkulaator</h1>
+<section id="yld">
+    <section id="osa1">
+        <h2>Saia kalkulaator</h2>
+        <label for="kogus">Kogus:</label>
+        <input type="number" id="kogus" min="1" max="10" step="1" onchange="saiaKalk()">
+        <br>
+        <label for="saiatyyp">Palun vali saia tüüp</label>
+        <select name="saiatyyp" id="saiatyyp" onchange="saiaKalk()">
+            <option value="vali">vali...</option>
+            <option value="mooni">moonisai</option>
+            <option value="juustu">juustusai</option>
+            <option value="pontsik">pontsik</option>
+            <option value="kaneeli">kaneelisai</option>
+        </select>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPJ5yZ5TSfv4ZnNpx4XZYgADEIbohxG8I-GeNkvLOYwA&s=10" alt="" id="pilt" width="100" height="100">
+        <div id="vastus"></div>
+    </section>
+    <section id="osa2">
+        <h2>Temperatuuri kalkulaator</h2>
+        <label for="temp">Sisesta temperatuur</label>
+        <input type="text" id="temp" min="-50" max="50" step="1" value="0">
+        <br>
+        <input type="radio" name="tempValik" id="celsius" value="celsius" onchange="tempTeisendus()">
+        <label for="celsius">&deg;C - Celsius</label>
+        <br>
+        <input type="radio" name="tempValik" id="fahrenheit" value="fahrenheit" onchange="tempTeisendus()">
+        <label for="fahrenheit">&deg;F - Fahrenheit</label>
+        <br>
+        <div id="vastus2"></div>
+        <img src="https://cdn1.byjus.com/wp-content/uploads/2019/03/relation-between-celsius-and-fahrenheit.png" width="250" height="250" alt="">
+    </section>
+    <section id="osa3">
+        <h2>Valuuta kalkulaator</h2>
+        <label for="euro">Sisesta summa eurodes</label>
+        <input type="number" id="euro" min="1" max="10" step="1">
+        <br>
+        <label for="valuuta"> Kirjuta kuhu teisendame</label>
+        (dollar, juann, rouble)
+        <input type="text" id="valuuta" name="valuuta" onchange="valuutaKalk()">
+
+        <div id="vastus3"></div>
+    </section>
+    <section id="osa4">
+        <h2>Protsendi kalkulaator</h2>
+        <label for="Protsent">Sisesta protsent</label>
+        <input type="number" id="Protsent" min="1" max="100" step="1" onchange="protsentKalk()">
+        <br>
+        <label for="Number">Sisesta number millest tahad protsenti võtta</label>
+        <input type="number" id="Number" min="1" max="1000" step="1" onchange="protsentKalk()">
+
+        <div id="vastus4"></div>
+
+        <!-- näiteks, protsendikalkulaator, kütusekalkulaator(km ja liitrit -> sõiduhind)
+                                            vanusekalkulaator (kasutaja sisestab sünniaasta->vanus
+                                            Kalk peab kasutama kas select või radionupp ja kuvada pilt vastavalt tehtud
+                                            valikule
+                                            AI pole lubatud!-->
+    </section>
 </section>
 </body>
 </html>
