@@ -5,9 +5,65 @@
     <title>Küsimused</title>
     <script src="../js/muusikaScript.js"></script>
     <link rel="stylesheet" href="küsimusStyle.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHWThkBvsDDEvtFFmqPF/LYI/Cxo=" crossorigin="anonymous"></script>
+    <script> $(function(){
+        // peidame vead
+        $('.viga').hide();
+
+        // puhastusnupp
+        $('#puhasta').click(function(){
+            $('#muusikaVorm')[0].reset();
+            $('.viga').hide();
+        });
+
+        // valideerimine, kui vorm on saadetud
+        $('#muusikaVorm').submit(function(event){
+            let valid = true;
+
+            // 1. Checkbox
+            if($('input[name="muusik"]:checked').length === 0){
+                $('#viga1').show();
+                valid = false;
+            } else { $('#viga1').hide(); }
+
+            // 3. Number (0–24)
+            let tunnid = $('#tund').val();
+            if(tunnid === "" || isNaN(tunnid) || tunnid < 0 || tunnid > 24){
+                $('#viga3').show();
+                valid = false;
+            } else { $('#viga3').hide(); }
+
+            // 4. Radio
+            if($('input[name="raadio"]:checked').length === 0){
+                $('#viga4').show();
+                valid = false;
+            } else { $('#viga4').hide(); }
+
+            // 5. Text (ainult tähed)
+            let tekst = $('#radiojaamad').val().trim();
+            if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+                $('#viga5').show();
+                valid = false;
+            } else { $('#viga5').hide(); }
+
+            // 6. Select
+            if($('#stiil').val() === ""){
+                $('#viga6').show();
+                valid = false;
+            } else { $('#viga6').hide(); }
+
+            // kui on vead, siis ei ole vaja vormi saada
+            if(!valid){
+                event.preventDefault();
+            } else {
+                alert("Vorm on edukalt saadetud!");
+            }
+        });
+    });
+    </script>
 </head>
 <body>
-<form action="#">
+<form id="muusikaVorm" action="#">
     <table border="1">
         <tr>
             <td colspan="2">
@@ -36,6 +92,7 @@
         <div id="vastus1">
 
         </div>
+            <span class="viga" id="viga1">Palun vali vähemalt ühe muusiku</span>
         </td>
         </tr>
 
@@ -58,11 +115,12 @@
         <label for="tund">Mitu tundi päevas sa kuulad muusikat</label>
         </td>
         <td>
-            <input type="number" min="0" max="24" step="1" value="0" id="tund" onclick="MuusikaAeg()">
+            <input type="number" min="0" max="24" step="1" value="" id="tund" onclick="MuusikaAeg()">
         </td>
 
         <td>
             <div id="vastus3"></div>
+            <span class="viga" id="viga3">palun Sisesta number 0-24</span>
         </td>
         </tr>
         <tr>
@@ -75,6 +133,7 @@
                     <label for="Ei">Ei</label>
         <td>
             <div id="muusika3"></div>
+            <span class="viga" id="viga4">Palun vali vastus</span>
         </td>
         </tr>
                     <tr>
@@ -89,6 +148,7 @@
         <div id="vastus5">
 
         </div>
+        <span class="viga" id="viga5">Palun vali raadiojaam</span>
         <tr>
             <td>
                 <br>
@@ -119,18 +179,20 @@
             <div id="vastus6">
 
             </div>
+            <span class="viga" id="viga6">Palun vali stiil</span>
         </td>
 
         </tr>
         <tr>
             <td>
-                <input type="reset" value="Puhasta" onclick="puhasta()">
+                <input type="reset" value="Puhasta" onclick="puhasta()" id="puhasta">
             </td>
             <td>
                 <input type="button" value="Näita andmed" onclick="Tervitus()">
             </td>
             <td>
                 <div id="vastus4"></div>
+
             </td>
         </tr>
     </table>
