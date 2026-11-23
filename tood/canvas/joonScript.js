@@ -124,6 +124,7 @@ function ring2(){
     if(tahvel.getContext){
         let r=tahvel.getContext("2d");
         r.fillStyle="red";
+        r.beginPath();
         r.arc(200,150,25,0, 2*Math.PI, true);
         r.fill();
     }
@@ -134,6 +135,7 @@ function ring3(){
     if(tahvel.getContext){
         let r=tahvel.getContext("2d");
         r.fillStyle="red";
+        r.beginPath();
         r.arc(100,150,25,0, 2*Math.PI, true);
         r.fill();
     }
