@@ -141,9 +141,12 @@ function ring3(){
     }
 }
 
-function inimene(){
-    const ring1=document.getElementById("ring1");
-    const ring2=document.getElementById("ring2");
-    const ring3=document.getElementById("ring3");
-
+function Nägu(){
+ring1();
+ring3();
+ring2();
+Joon1();
+ristkylik1();
+ristkylik2();
+ristkylik3();
 }
